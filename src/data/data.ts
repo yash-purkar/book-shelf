@@ -5,7 +5,7 @@ export const booksData: BookInterface[] = [
     id: 1,
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
-    category: "CurrentlyReading",
+    category: "currentlyReading",
     bookImg:
       "https://www.pluggedin.com/wp-content/uploads/2020/01/hobbit-cover.jpg",
   },
@@ -31,7 +31,7 @@ export const booksData: BookInterface[] = [
     id: 4,
     title: "Animal Farm",
     author: "George Orwell",
-    category: "CurrentlyReading",
+    category: "currentlyReading",
     bookImg:
       "https://cdn.kobo.com/book-images/b6716610-4164-4195-829c-4bb44046a97a/353/569/90/False/animal-farm-graphic-novel.jpg",
   },
@@ -55,7 +55,7 @@ export const booksData: BookInterface[] = [
     id: 7,
     title: "The Catcher",
     author: " J.D. Salinger",
-    category: "CurrentlyReading",
+    category: "currentlyReading",
     bookImg:
       "https://upload.wikimedia.org/wikipedia/commons/8/89/The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg",
   },

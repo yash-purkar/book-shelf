@@ -11,14 +11,16 @@ interface ReducerInitialState {
 export const useGetFilteredData = (): {
   getData: () => void;
   filteredData: ReducerInitialState | undefined;
+  moveBookToAnotherCategory: (bookID: number, category: string) => void;
 } => {
+  const [data, setData] = useState<BookInterface[]>([...booksData]);
   const [filteredData, setFilteredData] = useState<ReducerInitialState>();
 
   const getData = () => {
-    const data = booksData.reduce(
+    const allDataInObj = data.reduce(
       (acc: ReducerInitialState, curr: BookInterface) => {
         switch (curr.category) {
-          case "CurrentlyReading": {
+          case "currentlyReading": {
             return {
               ...acc,
               currentlyReading: [...acc.currentlyReading, curr],
@@ -39,9 +41,19 @@ export const useGetFilteredData = (): {
       },
       { currentlyReading: [], wantToRead: [], read: [] }
     );
-    setFilteredData(data);
+    setFilteredData(allDataInObj);
   };
 
-  useEffect(() => {getData()},[])
-  return { getData, filteredData };
+  const moveBookToAnotherCategory = (bookID: number, category: string) => {
+    const updateData = data?.map((book) =>
+      book.id === bookID ? { ...book, category } : book
+    );
+    setData(updateData);
+  };
+
+  useEffect(() => {
+    getData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
+  return { getData, filteredData, moveBookToAnotherCategory };
 };

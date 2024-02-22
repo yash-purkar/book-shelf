@@ -6,14 +6,24 @@ import { WantToRead } from "../wantToRead/WantToRead";
 import { Read } from "../read/Read";
 
 const Home = () => {
-  const { filteredData } = useGetFilteredData();
+  const { filteredData, moveBookToAnotherCategory } = useGetFilteredData();
+
+  const handleChange = (bookID: number, category: string) => {
+    moveBookToAnotherCategory(bookID, category);
+  };
 
   return (
     <div>
       <div className="container">
-        <CurrentlyReading books={filteredData?.currentlyReading || []} />
-        <WantToRead books={filteredData?.wantToRead || []} />
-        <Read books={filteredData?.read || []} />
+        <CurrentlyReading
+          handleChange={handleChange}
+          books={filteredData?.currentlyReading || []}
+        />
+        <WantToRead
+          handleChange={handleChange}
+          books={filteredData?.wantToRead || []}
+        />
+        <Read handleChange={handleChange} books={filteredData?.read || []} />
       </div>
     </div>
   );

@@ -17,12 +17,8 @@
 }
 
 .custom_dropdown {
-  width: 3rem;
+  width: 10rem;
   height: 3rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   position: relative;
 }
@@ -33,11 +29,10 @@
   height: 3rem;
   background-color: #fff;
   color: #5ead5c;
-  border-radius: 50%;
 }
 
 select {
-  width: 100%;
+  width: 24%;
   opacity: 0;
   padding: 1rem;
   cursor: pointer;

@@ -1,5 +1,6 @@
 .category {
     display: flex;
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 5rem;
@@ -13,8 +14,11 @@
     font-size: 2rem;
   }
 
+  .no_books_text{
+    color: orangered;
+  }
 @media(min-width:720px) {
     .category {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 }
