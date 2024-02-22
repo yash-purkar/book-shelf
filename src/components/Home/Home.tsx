@@ -1,15 +1,16 @@
 import React from "react";
-import { useGetFilteredData } from "../../hooks/useGetFilteredData";
 import { CurrentlyReading } from "../currentlyReading/CurrentlyReading";
 import "./home.css";
 import { WantToRead } from "../wantToRead/WantToRead";
 import { Read } from "../read/Read";
+import { useBooksContext } from "../../context/BooksContext";
 
 const Home = () => {
-  const { filteredData, moveBookToAnotherCategory } = useGetFilteredData();
+  const contextData = useBooksContext();
+  const { filteredData, moveBookToAnotherCategory } = contextData ?? {};
 
   const handleChange = (bookID: number, category: string) => {
-    moveBookToAnotherCategory(bookID, category);
+    moveBookToAnotherCategory && moveBookToAnotherCategory(bookID, category);
   };
 
   return (

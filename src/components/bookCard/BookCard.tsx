@@ -13,7 +13,6 @@ export const BookCard: React.FC<BookCardProps> = ({ book, handleChange }) => {
 
   const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target;
-    console.log(value)
     handleChange(book.id, value);
   };
 

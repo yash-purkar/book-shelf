@@ -1,16 +1,19 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { useGetFilteredData } from "../../hooks/useGetFilteredData";
 import { BookCard } from "../bookCard/BookCard";
 import { BookInterface } from "../../types";
 import "./search.css";
+import { useBooksContext } from "../../context/BooksContext";
+
 export const Search = () => {
-  const { data } = useGetFilteredData();
+  const contextData = useBooksContext();
+  const { data, moveBookToAnotherCategory } = contextData ?? {};
 
-  const [books, setBooks] = useState(data || []);
-
+  const [books, setBooks] = useState<BookInterface[] | undefined>(data || []);
   const [searchValue, setSearchValue] = useState<string>("");
 
-  const handleCategoryChange = (bookID: number, category: string) => {};
+  const handleCategoryChange = (bookID: number, category: string) => {
+    moveBookToAnotherCategory && moveBookToAnotherCategory(bookID, category);
+  };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
@@ -30,6 +33,10 @@ export const Search = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue]);
 
+  useEffect(() => {
+    setBooks(data);
+  }, [data]);
+
   return (
     <div className="container">
       <input
@@ -40,7 +47,7 @@ export const Search = () => {
         value={searchValue}
       />
       <div>
-        {books.length > 0 ? (
+        {books && books.length > 0 ? (
           <div className="books_container">
             {" "}
             {books.map((book: BookInterface) => (

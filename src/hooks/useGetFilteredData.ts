@@ -18,6 +18,7 @@ export const useGetFilteredData = (): {
   const [filteredData, setFilteredData] = useState<ReducerInitialState>();
 
   const getData = () => {
+    // It will store all the books category wise.
     const allDataInObj = data.reduce(
       (acc: ReducerInitialState, curr: BookInterface) => {
         switch (curr.category) {
