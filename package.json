@@ -12,7 +12,6 @@
     "react-router": "^6.22.1",
     "react-router-dom": "^6.22.1",
     "react-scripts": "^5.0.1",
-    "typescript": "^5.3.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,6 +39,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react-icons": "^3.0.0"
+    "@types/react-icons": "^3.0.0",
+    "typescript": "^5.3.3"
+
   }
 }
