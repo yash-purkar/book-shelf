@@ -1,0 +1,15 @@
+.category {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .category_title {
+    text-align: center;
+    color: gray;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    font-size: 2rem;
+  }
+  

@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import { booksData } from './data/data';
-import { Home } from './pages/home/Home';
+import { HomePage } from './pages/home/HomePage';
 
 function App() {
   return (
-    <Home data={booksData}/>
+    <HomePage/>
   );
 }
 

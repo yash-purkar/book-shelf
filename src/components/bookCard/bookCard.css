@@ -1,0 +1,45 @@
+.book_card {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.book_img {
+  width: 15rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+}
+
+.book_title,
+.book_author {
+  color: gray;
+  letter-spacing: 1px;
+}
+
+.custom_dropdown {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.dropdown_icon {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  color: #5ead5c;
+  border-radius: 50%;
+}
+
+select {
+  width: 100%;
+  opacity: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
