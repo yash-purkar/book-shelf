@@ -31,4 +31,5 @@ export const BookContextProvider: React.FC<ContextProviderProps> = ({
   );
 };
 
+// custom hook to make us of context directly
 export const useBooksContext = () => useContext(BooksContext);
