@@ -12,6 +12,7 @@ export const useGetFilteredData = (): {
   getData: () => void;
   filteredData: ReducerInitialState | undefined;
   moveBookToAnotherCategory: (bookID: number, category: string) => void;
+  data: BookInterface[];
 } => {
   const [data, setData] = useState<BookInterface[]>([...booksData]);
   const [filteredData, setFilteredData] = useState<ReducerInitialState>();
@@ -53,7 +54,7 @@ export const useGetFilteredData = (): {
 
   useEffect(() => {
     getData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
-  return { getData, filteredData, moveBookToAnotherCategory };
+  return { getData, filteredData, moveBookToAnotherCategory, data };
 };

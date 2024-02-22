@@ -1,0 +1,31 @@
+.container {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.input{
+    width: 50%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #5ead5c;
+    outline: 1px solid #5ead5c;
+    letter-spacing: 1px;
+    color: #5ead5c;
+}
+
+.books_container{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.no_books_text{
+    color: orangered;
+  }

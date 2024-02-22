@@ -1,24 +1,25 @@
 .category {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 5rem;
-    border-bottom: 1px solid lightgray;
-  }
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid lightgray;
+}
 
-  .category_title {
-    color: gray;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    font-size: 2rem;
-  }
+.category_title {
+  color: gray;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
 
-  .no_books_text{
-    color: orangered;
+.no_books_text {
+  color: orangered;
+}
+
+@media (min-width: 720px) {
+  .category {
+    justify-content: space-evenly;
   }
-@media(min-width:720px) {
-    .category {
-        justify-content: space-evenly;
-    }
 }

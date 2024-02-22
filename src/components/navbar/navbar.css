@@ -1,12 +1,28 @@
-nav{
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    margin-bottom: 3rem;
+nav {
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-h1{
-    color: #5ead5c;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+h1 {
+  color: #5ead5c;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.navigate_button {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  border: 1px solid #5ead5c;
+  background-color: #fff;
+  color: #5ead5c;
+  padding: 0.3rem 1rem;
+  gap: 0.2rem;
 }
