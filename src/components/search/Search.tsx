@@ -11,13 +11,16 @@ export const Search = () => {
   const [books, setBooks] = useState<BookInterface[] | undefined>(data || []);
   const [searchValue, setSearchValue] = useState<string>("");
 
+  //   handles - If user moves book from one category to another
   const handleCategoryChange = (bookID: number, category: string) => {
     moveBookToAnotherCategory && moveBookToAnotherCategory(bookID, category);
   };
 
+//   search value change
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
 
+    // matches with title of book
     const filteredData = data?.filter((book: BookInterface) =>
       book.title.toLowerCase().includes(searchValue.toLowerCase())
     );
@@ -26,6 +29,7 @@ export const Search = () => {
     setSearchValue(value);
   };
 
+//   If user clear using ctrl + backspace.
   useEffect(() => {
     if (!searchValue) {
       setBooks(data);

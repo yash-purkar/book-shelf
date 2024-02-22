@@ -18,6 +18,7 @@ const BooksContext = createContext<BooksContextData | undefined>(undefined);
 export const BookContextProvider: React.FC<ContextProviderProps> = ({
   children,
 }) => {
+  // Get data from custom hook
   const { data, filteredData, getData, moveBookToAnotherCategory } =
     useGetFilteredData();
 

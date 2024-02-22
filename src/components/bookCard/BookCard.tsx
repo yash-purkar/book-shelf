@@ -11,6 +11,7 @@ interface BookCardProps {
 export const BookCard: React.FC<BookCardProps> = ({ book, handleChange }) => {
   const categories = ["currentlyReading", "wantToRead", "read"];
 
+//   handle dropdown change
   const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target;
     handleChange(book.id, value);

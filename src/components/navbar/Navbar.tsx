@@ -8,11 +8,13 @@ export const Navbar = () => {
   const navigate = useNavigate();
   const [isUserOnSearchPage, setIsUserOnSearchPage] = useState<boolean>(false);
 
+//   Naviagte based on the condition
   const handleNavigate = () => {
     const navigateTo = isUserOnSearchPage ? "/" : "/search";
     navigate(navigateTo);
   };
 
+//   If pathname includes search user  will be on search page otherwise on homepage.
   useEffect(() => {
     if (location.pathname.includes("search")) {
       setIsUserOnSearchPage(true);
