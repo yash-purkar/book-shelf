@@ -37,6 +37,7 @@ export const Search = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue]);
 
+//   If context data chagnes update the books data
   useEffect(() => {
     setBooks(data);
   }, [data]);
